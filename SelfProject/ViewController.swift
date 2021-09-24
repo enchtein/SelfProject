@@ -79,6 +79,7 @@ class ViewController: UIViewController {
     guard let frontView = gestureRecognizer.view as? InfoContainerView else { return }
     let detectSwipeSide: SwipeSide = (self.view.center.x - frontView.center.x) > 0 ? .left : .right
     let translation = gestureRecognizer.translation(in: self.view)
+    print(translation)
     tildTheView(with: translation, at: frontView, translationX: translation.x, detectSwipeSide: detectSwipeSide, gestureState: gestureRecognizer.state)
     if gestureRecognizer.state == .began || gestureRecognizer.state == .changed {
       
