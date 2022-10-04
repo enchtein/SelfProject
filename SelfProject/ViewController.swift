@@ -87,6 +87,7 @@ class ViewController: UIViewController {
       
       // note: 'view' is optional and need to be unwrapped
       gestureRecognizer.view!.center = CGPoint(x: gestureRecognizer.view!.center.x + translation.x, y: gestureRecognizer.view!.center.y)
+      print("test reverse commit")
       gestureRecognizer.setTranslation(CGPoint.zero, in: self.view)
     } else if gestureRecognizer.state == .ended {
       
